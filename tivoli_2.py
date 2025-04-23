@@ -52,7 +52,7 @@ for key, default in {
 def next_step(): st.session_state.step += 1
 def go_to(step): st.session_state.step = step
 
-show_image("tivoli_logo.png", logo=True)
+show_image("tivoli_logo2.png", logo=True)
 st.title("🌩️ Din Tivoli-profil")
 
 # Step 1

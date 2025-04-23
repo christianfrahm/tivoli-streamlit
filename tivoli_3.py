@@ -132,6 +132,7 @@ elif st.session_state.step == 51:
             st.session_state.performance_index = 0
             go_to(6)
 
+# Step 6 – Output
 elif st.session_state.step == 6:
     st.header("🌟 Din Tivoli-profil")
     tags = []
@@ -148,9 +149,13 @@ elif st.session_state.step == 6:
     if st.session_state.mad in ["Gourmet og fine dining", "Begge dele"]:
         tags.append("Gourmet")
 
+    if st.session_state.forlystelser in ["Jeg elsker dem – det er et must", "Jeg prøver gerne et par stykker"]:
+        tags.append("Forlystelser")
+
     for perf, interested in st.session_state.performance_hot.items():
         if interested:
             tags.append(perf)
 
     st.success("Din Tivoli-profil:")
     st.write(", ".join(tags) if tags else "Ingen relevante segmenter endnu.")
+    st.markdown(f"**Antal besøg:** {st.session_state.get('besoeg', 'Ikke besvaret')}")

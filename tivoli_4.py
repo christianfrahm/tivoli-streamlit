@@ -68,8 +68,7 @@ st.title("🌩️ Din Tivoli-profil")
 
 # Step 0 – Forside
 if st.session_state.step == 0:
-    st.markdown("**NB: Du skal trykke på hver knap to gange pga. Streamlit bug i nogle browsere.**")
-    st.markdown("👉 Det gælder især knapper med billeder.")
+    st.markdown("**NB: Du skal trykke på hver knap to gange!")
     if centered_button("Start testen"):
         next_step()
 
